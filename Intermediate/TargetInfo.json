@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "CPP_JeuxDeDame",
+			"Path": "..\\Source\\CPP_JeuxDeDame.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "CPP_JeuxDeDameEditor",
+			"Path": "..\\Source\\CPP_JeuxDeDameEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

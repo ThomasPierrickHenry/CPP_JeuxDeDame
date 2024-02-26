@@ -1,0 +1,21 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/UE5/CPP_JeuxDeDame/Content/map/map_game.umap",
+				"C:/UE5/CPP_JeuxDeDame/Content/Blueprint/BP_Pion.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/map/map_game_BuiltData.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/Blueprint/config/PC_Game.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/StaticMesh/pion.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/Materiau/mat_pion.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/StaticMesh/Material.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/StaticMesh/palette.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/StaticMesh/plateau.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/Blueprint/BP_Camera.uasset"
+			]
+		}
+	]
+}

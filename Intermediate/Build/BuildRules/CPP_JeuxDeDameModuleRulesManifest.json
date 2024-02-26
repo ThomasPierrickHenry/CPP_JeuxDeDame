@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\UE5\\CPP_JeuxDeDame\\Source\\CPP_JeuxDeDame\\CPP_JeuxDeDame.Build.cs",
+		"C:\\UE5\\CPP_JeuxDeDame\\Source\\CPP_JeuxDeDame.Target.cs",
+		"C:\\UE5\\CPP_JeuxDeDame\\Source\\CPP_JeuxDeDameEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}
