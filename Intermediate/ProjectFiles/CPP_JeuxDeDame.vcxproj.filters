@@ -11,7 +11,10 @@
     <None Include="..\..\Source\CPP_JeuxDeDameEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\README.md" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -34,6 +37,12 @@
       <Filter>Source\CPP_JeuxDeDame</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\CPP_JeuxDeDame\BP_Camera.h">
+      <Filter>Source\CPP_JeuxDeDame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CPP_JeuxDeDame\BP_Plateau.cpp">
+      <Filter>Source\CPP_JeuxDeDame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CPP_JeuxDeDame\BP_Plateau.h">
       <Filter>Source\CPP_JeuxDeDame</Filter>
     </ClInclude>
     <None Include="..\..\Source\CPP_JeuxDeDame\CPP_JeuxDeDame.Build.cs">
@@ -63,5 +72,14 @@
     <ClInclude Include="..\..\Source\CPP_JeuxDeDame\PC_Game.h">
       <Filter>Source\CPP_JeuxDeDame</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\CPP_JeuxDeDame\PlateauCase.cpp">
+      <Filter>Source\CPP_JeuxDeDame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CPP_JeuxDeDame\PlateauCase.h">
+      <Filter>Source\CPP_JeuxDeDame</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\ToDoList.txt" />
   </ItemGroup>
 </Project>

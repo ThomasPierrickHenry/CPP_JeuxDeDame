@@ -76,7 +76,6 @@ void EmptyLinkFunctionForGeneratedCodePC_Game() {}
 	{
 		return APC_Game::StaticClass();
 	}
-	APC_Game::APC_Game(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APC_Game);
 	APC_Game::~APC_Game() {}
 	struct Z_CompiledInDeferFile_FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_PC_Game_h_Statics

@@ -14,7 +14,15 @@
 				"C:/UE5/CPP_JeuxDeDame/Content/StaticMesh/Material.uasset",
 				"C:/UE5/CPP_JeuxDeDame/Content/StaticMesh/palette.uasset",
 				"C:/UE5/CPP_JeuxDeDame/Content/StaticMesh/plateau.uasset",
-				"C:/UE5/CPP_JeuxDeDame/Content/Blueprint/BP_Camera.uasset"
+				"C:/UE5/CPP_JeuxDeDame/Content/Blueprint/BP_Camera.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/StaticMesh/Material_002.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/StaticMesh/slot.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/Blueprint/BP_Plateau.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/Materiau/Mat_SlotBlanc.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/Materiau/Mat_SlotNoir.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/Blueprint/config/GM_Game.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/Blueprint/BP_Case.uasset",
+				"C:/UE5/CPP_JeuxDeDame/Content/Materiau/Mat_pionBlanc.uasset"
 			]
 		}
 	]

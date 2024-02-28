@@ -25,6 +25,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -32,10 +33,14 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void Fonction1();
-	/*void Fonction2(int N);*/
-	int Fonction3(int N1, int N2);
-	int Fonction4(int N1, int N2);
+
+	//Appellé quand la souris passe sur le pion
+	UFUNCTION()
+	void OnMouseOverBegin(UPrimitiveComponent* TouchedComponent);
+	UFUNCTION()
+	//Appellé ne passe plus la souris sur le pion
+	void OnMouseOverEnd(UPrimitiveComponent* TouchedComponent);
+
 
 protected: 
 	/////COmposants////
@@ -44,6 +49,18 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="StaticMesh")
 	UStaticMeshComponent* MeshPion;
+
+	//Variable Index du propriétaire du pion défini dans l'éditeur
+	UPROPERTY(EditAnywhere, BlueprintReadOnly  , Category = "Integer")
+	int IndexPionOwner = 0;
 	
 
+protected:
+	void SurvollerPion(float emissiveColor);
+
+protected:
+	//Variable Index Player défini a partir du Player controller
+	int PlayerIndex = -2;
+	//Fonction Renvoie l'index du player
+	int GetMyPlayerIndex();
 };

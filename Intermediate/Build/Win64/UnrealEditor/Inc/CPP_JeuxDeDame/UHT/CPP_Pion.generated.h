@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
 #ifdef CPP_JEUXDEDAME_CPP_Pion_generated_h
 #error "CPP_Pion.generated.h already included, missing '#pragma once' in CPP_Pion.h"
 #endif
@@ -17,7 +18,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_CPP_Pion_h_18_SPARSE_DATA
 #define FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_CPP_Pion_h_18_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_CPP_Pion_h_18_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_CPP_Pion_h_18_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_CPP_Pion_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnMouseOverEnd); \
+	DECLARE_FUNCTION(execOnMouseOverBegin);
+
+
 #define FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_CPP_Pion_h_18_ACCESSORS
 #define FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_CPP_Pion_h_18_INCLASS_NO_PURE_DECLS \
 private: \

@@ -13,5 +13,20 @@ UCLASS()
 class CPP_JEUXDEDAME_API APC_Game : public APlayerController
 {
 	GENERATED_BODY()
+
+
+protected:
+	APC_Game();
+	virtual void BeginPlay() override;
+
+protected:
+	//UPROPERTY(Replicated)
+	int PlayerIndex = -1;
+	int GetMyIPlayerndex();
+
+
+protected:
+	//Définir la fonction PossessCamera
+	void PossessMyCamera();
 	
 };

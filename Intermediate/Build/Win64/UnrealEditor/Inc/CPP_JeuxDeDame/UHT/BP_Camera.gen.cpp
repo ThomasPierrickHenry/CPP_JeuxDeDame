@@ -33,6 +33,10 @@ void EmptyLinkFunctionForGeneratedCodeBP_Camera() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_CameraPlayer_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraPlayer;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_PlayerIndexCamera_MetaData[];
+#endif
+		static const UECodeGen_Private::FIntPropertyParams NewProp_PlayerIndexCamera;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -51,7 +55,7 @@ void EmptyLinkFunctionForGeneratedCodeBP_Camera() {}
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABP_Camera_Statics::NewProp_CameraPlayer_MetaData[] = {
-		{ "Category", "Cam\xef\xbf\xbdra" },
+		{ "Category", "Camera" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//Camera du joueur//\n" },
 #endif
@@ -63,8 +67,22 @@ void EmptyLinkFunctionForGeneratedCodeBP_Camera() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABP_Camera_Statics::NewProp_CameraPlayer = { "CameraPlayer", nullptr, (EPropertyFlags)0x002008000008001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABP_Camera, CameraPlayer), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABP_Camera_Statics::NewProp_CameraPlayer_MetaData), Z_Construct_UClass_ABP_Camera_Statics::NewProp_CameraPlayer_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABP_Camera_Statics::NewProp_PlayerIndexCamera_MetaData[] = {
+		{ "Category", "Camera" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Variable PlayerIndexCamera\n" },
+#endif
+		{ "ModuleRelativePath", "BP_Camera.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Variable PlayerIndexCamera" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ABP_Camera_Statics::NewProp_PlayerIndexCamera = { "PlayerIndexCamera", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABP_Camera, PlayerIndexCamera), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABP_Camera_Statics::NewProp_PlayerIndexCamera_MetaData), Z_Construct_UClass_ABP_Camera_Statics::NewProp_PlayerIndexCamera_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABP_Camera_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABP_Camera_Statics::NewProp_CameraPlayer,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABP_Camera_Statics::NewProp_PlayerIndexCamera,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABP_Camera_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABP_Camera>::IsAbstract,
@@ -104,9 +122,9 @@ void EmptyLinkFunctionForGeneratedCodeBP_Camera() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_BP_Camera_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABP_Camera, ABP_Camera::StaticClass, TEXT("ABP_Camera"), &Z_Registration_Info_UClass_ABP_Camera, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABP_Camera), 1061628902U) },
+		{ Z_Construct_UClass_ABP_Camera, ABP_Camera::StaticClass, TEXT("ABP_Camera"), &Z_Registration_Info_UClass_ABP_Camera, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABP_Camera), 4186985406U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_BP_Camera_h_3831165242(TEXT("/Script/CPP_JeuxDeDame"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_BP_Camera_h_715432650(TEXT("/Script/CPP_JeuxDeDame"),
 		Z_CompiledInDeferFile_FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_BP_Camera_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_BP_Camera_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

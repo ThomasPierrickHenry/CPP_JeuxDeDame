@@ -29,8 +29,6 @@ public: \
 
 
 #define FID_CPP_JeuxDeDame_Source_CPP_JeuxDeDame_PC_Game_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API APC_Game(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APC_Game(APC_Game&&); \
@@ -38,7 +36,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, APC_Game); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APC_Game); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APC_Game) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APC_Game) \
 	NO_API virtual ~APC_Game();
 
 

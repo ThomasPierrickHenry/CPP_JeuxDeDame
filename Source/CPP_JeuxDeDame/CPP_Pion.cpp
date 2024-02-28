@@ -24,13 +24,6 @@ ACPP_Pion::ACPP_Pion()
 
 	// Set la variable StaticMesh
 	if(MeshFbx.Object) MeshPion->SetStaticMesh(MeshFbx.Object);
-	
-	
-	
-
-
-
-
 
 }
 
@@ -39,47 +32,22 @@ void ACPP_Pion::BeginPlay()
 {
 	Super::BeginPlay();
 
-	Fonction1();
-	int N = Fonction3(10,5);
-	UE_LOG(LogTemp, Warning, TEXT("%d"), N);
-	if (false)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("it's true"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("it's false"));
-	}
-	
-
+	//On récupere le pointeur de mon player controller
 	APC_Game* pcGame = Cast<APC_Game>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
 
+	//Activer la détection de survol du curseur 
+	if (pcGame)
+	{ 
+		SetActorEnableCollision(true);
+		MeshPion->OnBeginCursorOver.AddDynamic(this, &ACPP_Pion::OnMouseOverBegin);
+		MeshPion->OnEndCursorOver.AddDynamic(this, &ACPP_Pion::OnMouseOverEnd);
+	}
+	
+	//Set PlayerIndex
+	PlayerIndex = GetMyPlayerIndex();
+	//UE_LOG(LogTemp, Warning, TEXT("%d"),PlayerIndex);
 
 }
-
-
-int ACPP_Pion::Fonction4(int N1, int N2)
-{
-	int N3 = N1 + N2;
-	return N3;
-}
-
-void ACPP_Pion:: Fonction1()
-{
-	UE_LOG(LogTemp, Warning, TEXT("Salut"));
-}
-
-//void ACPP_Pion::Fonction2(int N)
-//{
-//	UE_LOG(LogTemp, Warning, TEXT("%d"), N);
-//}
-
-int ACPP_Pion::Fonction3(int N1, int N2)
-{
-	int N3 = N1 + N2;
-	return N3;
-}
-
 
 // Called every frame
 void ACPP_Pion::Tick(float DeltaTime)
@@ -93,5 +61,39 @@ void ACPP_Pion::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+void ACPP_Pion::OnMouseOverBegin(UPrimitiveComponent* TouchedComponent)
+{
+	// Code à exécuter lorsque la souris survole le pion
+	if (PlayerIndex == IndexPionOwner)
+	{
+		SurvollerPion(2.f);
+	}
+
+}
+
+void ACPP_Pion::OnMouseOverEnd(UPrimitiveComponent* TouchedComponent)
+{
+	// Code à exécuter lorsque la souris quitte le pion
+	if (PlayerIndex == IndexPionOwner)
+	{
+		SurvollerPion(0.f);
+	}
+}
+
+void ACPP_Pion::SurvollerPion(float emissiveColor)
+{
+	UMaterialInterface* Material = MeshPion->GetMaterial(0);
+	UMaterialInstanceDynamic* InstanceMateriau = MeshPion->CreateAndSetMaterialInstanceDynamic(0);
+	InstanceMateriau->SetScalarParameterValue("emissive", emissiveColor);
+	MeshPion->SetMaterial(0, InstanceMateriau);
+
+}
+
+int ACPP_Pion::GetMyPlayerIndex()
+{
+	if (HasAuthority())return 0;
+	else return 1;
 }
 

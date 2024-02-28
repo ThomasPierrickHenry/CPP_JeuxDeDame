@@ -37,7 +37,11 @@ protected:
 
 	//Camera du joueur//
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Caméra")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Camera")
 	UCameraComponent* CameraPlayer;
 
+public:
+	//Variable PlayerIndexCamera
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Camera")
+	int PlayerIndexCamera = 0;
 };
