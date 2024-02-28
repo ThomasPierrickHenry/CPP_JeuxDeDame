@@ -1,0 +1,3 @@
+
+-refaire code pour du solo (chacun son tour )
+-faire un plateau dynamique
